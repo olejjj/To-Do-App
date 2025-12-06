@@ -67,7 +67,7 @@ input::placeholder {
 }
 
 .delete-button {
-    visibility: visible;
+    visibility: hidden;
     opacity: 80%;
     border: none;
     border-radius: 10px;

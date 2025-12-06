@@ -2,7 +2,6 @@ const input = document.getElementById("input");
 const button = document.getElementById("input-button");
 const todos = document.getElementById("todos");
 
-
 // block enter in input
 input.addEventListener("keydown", function(event) {
     if (event.key === "Enter"){
@@ -13,7 +12,26 @@ input.addEventListener("keydown", function(event) {
 // toggle completed - uncompleted todos
 todos.addEventListener("click", function(event) {
     event.target.classList.toggle("completed");
+
+    getTrash();
+
 });
+
+function getTrash() {
+
+    const li = document.getElementsByTagName("li");
+    const deleteButton = document.querySelectorAll(".delete-button");
+
+    for (let i = 0; i < li.length; i++) {
+        if (li[i].classList[0] === "completed") {
+            deleteButton[i].style.visibility = "visible";
+        } else {
+            deleteButton[i].style.visibility = "hidden";
+        }
+    }
+    console.log(li);
+    console.log(deleteButton);
+}
 
 button.addEventListener("click", function (event) { addToDo(); });
 
