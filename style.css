@@ -73,7 +73,7 @@ input::placeholder {
     border-radius: 10px;
     grid-column: 2;
     width: 55%;
-    height: 45%;
+    height: 2rem;
     align-self: center;
     justify-self: center;
     cursor: pointer;
